@@ -1,0 +1,33 @@
+opencollection: 1.0.0
+
+info:
+  name: Conexu
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  headers:
+    - name: Origin
+      value: "{{base_url}}"
+  scripts:
+    - type: before-request
+      code: |-
+        const cookie = bru.getEnvVar('auth_cookie');
+        if (cookie) {
+          req.setHeader('Cookie', cookie);
+        }
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,41 @@
+info:
+  name: auth
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/auth/sign-in/email"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "jane@example.com",
+        "password": "admin123"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const setCookie = res.getHeader('set-cookie');
+
+        if (setCookie) {
+          const sessionCookie = setCookie
+            .map(cookie => cookie.split(';')[0].trim())
+            .find(cookie =>
+              cookie.startsWith('__Secure-better-auth.session_token=') ||
+              cookie.startsWith('better-auth.session_token=')
+            );
+
+          if (sessionCookie) {
+            bru.setEnvVar('auth_cookie', sessionCookie);
+          }
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

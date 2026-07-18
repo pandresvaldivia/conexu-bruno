@@ -1,0 +1,8 @@
+name: local
+variables:
+  - name: base_url
+    value: http://localhost:4000
+  - name: graphql_url
+    value: http://localhost:4000/graphql
+  - name: api_url
+    value: http://localhost:4000/api

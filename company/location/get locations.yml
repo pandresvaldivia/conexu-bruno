@@ -1,0 +1,22 @@
+info:
+  name: get locations
+  type: graphql
+  seq: 1
+
+graphql:
+  method: POST
+  url: "{{graphql_url}}"
+  body:
+    query: |-
+      query {
+        getLocations {
+          id
+          name
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
