@@ -1,5 +1,5 @@
 info:
-  name: get locations
+  name: get location
   type: graphql
   seq: 1
 
