@@ -1,0 +1,42 @@
+info:
+  name: get-space-by-id
+  type: graphql
+  seq: 1
+
+graphql:
+  method: POST
+  url: "{{graphql_url}}"
+  body:
+    query: |-
+      query {
+        getSpaceById(id: "ee0d2081-5de8-44b4-a32d-053c79c88f24") {
+          id
+          name
+          slug
+          sport
+          sportType
+          floorType
+          maxCapacity
+          lighting
+          roofing
+          changingRoom
+          parking
+          stands
+          airConditioner
+          wifi
+          enabled
+          transformable
+          depositType
+          cancellationPolicy
+          allowedDurations
+          createdAt
+          updatedAt
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
