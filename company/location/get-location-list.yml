@@ -9,20 +9,16 @@ graphql:
   body:
     query: |-
       query {
-        locations(first: 2) {
+        locations(offset: 0, limit: 12) {
       		totalCount
           pageInfo {
-            startCursor
-            endCursor
             hasNextPage
             hasPreviousPage
           }
-          edges {
-            node {
-              id
+      		locations {
+            	id
               name
               address
-            }
           }
         }
       }
