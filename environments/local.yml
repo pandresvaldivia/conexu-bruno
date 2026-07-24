@@ -7,4 +7,4 @@ variables:
   - name: api_url
     value: http://localhost:4000/api
   - name: auth_cookie
-    value: better-auth.session_token=QkcBhadpkqa6nlge2EW5sSEIex29rnTW.ir0R14FfqxZDCOQse%2FS5QMz8mSuZib2YGGOCsZ19lU4%3D
+    value: better-auth.session_token=URp8QlHKGGtaGV8BGAhQilKIjJa0Lq7b.Wtd3vxlyE2szTxWL%2FqOGtgmq9AIc9o%2BBVxnCzfAyrlE%3D

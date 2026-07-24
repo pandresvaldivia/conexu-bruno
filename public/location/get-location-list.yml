@@ -9,7 +9,7 @@ graphql:
   body:
     query: |-
       query {
-        locations(offset: 0, limit: 12) {
+        locations(offset: 4, limit: 4) {
       		totalCount
           pageInfo {
             hasNextPage

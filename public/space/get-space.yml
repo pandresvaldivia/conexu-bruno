@@ -9,7 +9,7 @@ graphql:
   body:
     query: |-
       query {
-        space(id: "0541b339-3899-4867-a9c2-e4f4fd2b5e02") {
+        space(id: "7e1af088-a693-47b9-a1cd-c7a81adfcf00") {
           id
           name
           slug

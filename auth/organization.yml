@@ -10,7 +10,7 @@ http:
     type: json
     data: |-
       {
-        "organizationId": "70dfa2a6-af79-4b55-9816-4171e1f49ece"
+        "organizationId": "f168d1f5-4fc4-4bf1-9f28-76afc8a0ae4e"
       }
   auth: inherit
 

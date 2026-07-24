@@ -1,0 +1,30 @@
+info:
+  name: get-location
+  type: graphql
+  seq: 2
+
+graphql:
+  method: POST
+  url: "{{graphql_url}}"
+  body:
+    query: |-
+      query {
+        locations(offset: 4, limit: 4) {
+      		totalCount
+          pageInfo {
+            hasNextPage
+            hasPreviousPage
+          }
+      		locations {
+            	id
+              name
+              address
+          }
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
