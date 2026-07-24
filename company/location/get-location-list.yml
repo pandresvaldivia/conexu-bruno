@@ -1,0 +1,34 @@
+info:
+  name: get-location-list
+  type: graphql
+  seq: 1
+
+graphql:
+  method: POST
+  url: "{{graphql_url}}"
+  body:
+    query: |-
+      query {
+        locations(first: 2) {
+      		totalCount
+          pageInfo {
+            startCursor
+            endCursor
+            hasNextPage
+            hasPreviousPage
+          }
+          edges {
+            node {
+              id
+              name
+              address
+            }
+          }
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

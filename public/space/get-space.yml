@@ -1,5 +1,5 @@
 info:
-  name: get-space-by-id
+  name: get-space
   type: graphql
   seq: 1
 
@@ -9,7 +9,7 @@ graphql:
   body:
     query: |-
       query {
-        getSpaceById(id: "ee0d2081-5de8-44b4-a32d-053c79c88f24") {
+        space(id: "0541b339-3899-4867-a9c2-e4f4fd2b5e02") {
           id
           name
           slug
